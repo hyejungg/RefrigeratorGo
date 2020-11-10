@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/refrigerator"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/welcomeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/welcomeMessage1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ggj_bold"
+                        android:padding="5dp"
+                        android:text="냉장GO"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/welcomeMessage2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ggj_bold"
+                        android:padding="5dp"
+                        android:text="입니다. 환영합니다."
+                        android:textColor="@color/colorText"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/guideComment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ggj_bold"
+                    android:padding="5dp"
+                    android:text="다음항목을 입력해주세요."
+                    android:textColor="@color/colorText"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/refrigerator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/refrigerator" />
+
+            <RelativeLayout
+                android:id="@+id/userInformation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/refrigerator"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/first"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/ggb_bold"
+                        android:text="이름"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/et_name"
+                        android:layout_width="150dp"
+                        android:layout_height="43dp"
+                        android:fontFamily="@font/ggb_regular"
+                        android:hint="이름"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="10dp"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/second"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/first"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/ggb_bold"
+                        android:text="아이디"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/et_phone"
+                        android:layout_width="150dp"
+                        android:layout_height="43dp"
+                        android:fontFamily="@font/ggb_regular"
+                        android:hint="아이디"
+                        android:inputType="text"
+                        android:paddingLeft="10dp"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/third"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/second"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/ggb_bold"
+                        android:text="이메일"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/et_email"
+                        android:layout_width="150dp"
+                        android:layout_height="43dp"
+                        android:fontFamily="@font/ggb_regular"
+                        android:hint="jango@email.com"
+                        android:inputType="textEmailAddress"
+                        android:paddingLeft="10dp"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/fourth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/third"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/ggb_bold"
+                        android:text="냉장고 이름"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/et_rfg_name"
+                        android:layout_width="150dp"
+                        android:layout_height="43dp"
+                        android:fontFamily="@font/ggb_regular"
+                        android:hint="냉장고 이름"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="10dp"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/fifth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fourth"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/ggb_bold"
+                        android:text="비밀번호"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/et_pass"
+                        android:layout_width="150dp"
+                        android:layout_height="43dp"
+                        android:fontFamily="@font/ggb_regular"
+                        android:hint="비밀번호"
+                        android:inputType="textPassword"
+                        android:paddingLeft="10dp"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sixth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fifth"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/ggb_bold"
+                        android:text="비밀번호 확인"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:layout_width="150dp"
+                        android:layout_height="43dp"
+                        android:fontFamily="@font/ggb_regular"
+                        android:hint="비밀번호 확인"
+                        android:inputType="textPassword"
+                        android:paddingLeft="10dp"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+                </LinearLayout>
+                <!-- 버튼에 alignParentRight를 줘서 어떤 해상도에서든지 가장 오른쪽에 정렬되게 함-->
+                <Button
+                    android:id="@+id/join_btn"
+                    android:layout_width="80dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/sixth"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginVertical="20dp"
+                    android:background="@drawable/background4"
+                    android:fontFamily="@font/jalnan"
+                    android:text="가입하기"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" /><!--버튼 테두리 둥글게 함-->
+                <TextView
+                    android:layout_below="@id/join_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/jalnan"
+                    android:padding="10dp"
+                    android:text="냉장GO"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorMenuBar"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

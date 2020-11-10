@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "266483555369",
+    "firebase_url": "https://storagetest-e1f6c.firebaseio.com",
+    "project_id": "storagetest-e1f6c",
+    "storage_bucket": "storagetest-e1f6c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:266483555369:android:3a6b1c585658759c",
+        "android_client_info": {
+          "package_name": "com.example.refrigeratorgo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "266483555369-fmvvaj1jnm8qddufu2qhudvirshfuokv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnVba-oPSrRwm6-i_0DctdXkBrIihQ3Pk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "266483555369-fmvvaj1jnm8qddufu2qhudvirshfuokv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

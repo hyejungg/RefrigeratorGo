@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/searchTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:fontFamily="@font/ggj_bold"
+        android:text="THIS_IS_냉장GO_MEMBERS"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textAlignment="center" />
+
+    <EditText
+        android:background="@drawable/background9"
+        android:id="@+id/search_num"
+        android:layout_width="340dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="20sp"
+        android:layout_below="@+id/searchTitle"
+        android:textSize="15dp"
+        android:hint="전화번호로 검색하세요"
+        android:fontFamily="@font/ggb_bold"
+        android:paddingStart="15dp"
+        android:inputType="number"
+        />
+    <ImageView
+        android:layout_marginLeft="5dp"
+        android:layout_alignBottom="@id/search_num"
+        android:id="@+id/browser"
+        android:layout_width="30dp"
+        android:layout_height="15dp"
+        android:src="@drawable/search_button"
+        android:layout_toEndOf="@+id/search_num"
+        android:layout_below="@+id/searchTitle"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_num"
+        android:layout_above="@+id/endMark"
+        android:background="@drawable/background8"
+        android:layout_margin="20dp">
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/endMark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="냉장GO"
+        android:textSize="20sp"
+        android:textColor="@color/colorMenuBar"
+        android:fontFamily="@font/jalnan"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"/>
+
+</RelativeLayout>

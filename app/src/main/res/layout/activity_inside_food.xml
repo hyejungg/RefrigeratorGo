@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <!--우유/유제품-->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="0dp"
+        android:background="@color/colorMenuBar"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="제목"
+        android:fontFamily="@font/ggj_bold"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+
+    <RelativeLayout
+        android:layout_below="@id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--스크롤뷰가 들어가는 안으 ㅣ내용은 하나의 레이아웃 안에 넣어줘서 해야함.-->
+        <!--스크롤뷰는 객체를 따로따로 못함. 중!요!-->
+
+        <GridView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="2"
+            android:id="@+id/grid">
+        </GridView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

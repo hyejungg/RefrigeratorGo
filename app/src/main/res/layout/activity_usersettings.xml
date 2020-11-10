@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/settings_layout"
+    android:background="@color/colorBackground">
+
+    <TextView
+        android:id="@+id/user_infomation_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="0dp"
+        android:background="@color/colorMenuBar"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="내정보 관리"
+        android:fontFamily="@font/ggj_medium"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+
+    <RelativeLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/user_infomation_settings"
+        android:layout_above="@id/menu_bar"
+        android:layout_margin="20dp">
+
+
+        <FrameLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/image_set"
+            android:layout_centerHorizontal="true">
+        <ImageView
+            android:adjustViewBounds="true"
+            android:id="@+id/profile_image"
+            android:onClick="loadImagefromGallery"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/user_image2"
+            android:layout_margin="20dp" />
+            <ImageButton
+                android:id="@+id/gallery"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignEnd="@+id/image_set"
+                android:layout_gravity="right|bottom"
+                android:layout_marginBottom="20dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_image_black_24dp" />
+        </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_centerInParent="true"
+                android:layout_below="@id/image_set"
+                android:id="@+id/user_name_layout"
+                android:layout_marginBottom="20dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content">
+            <EditText
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ggb_bold"
+                android:hint="name"
+                android:paddingHorizontal="30dp"
+                android:textColor="#000000"
+                android:inputType="textPersonName"
+                android:textColorHint="#8B8989"
+                android:textSize="20sp" />
+            <ImageButton
+                android:id="@+id/editName"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/edit"
+                android:background="@android:color/transparent"
+                android:layout_gravity="right|center" />
+            </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_below="@id/user_name_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ggb_bold"
+                    android:hint="name"
+                    android:text="냉장고이름"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/refrigerator_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/ggb_regular"
+                    android:hint="Refrigerator name"
+                    android:singleLine="true"
+                    android:paddingLeft="10dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#8B8989"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:text="이메일"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:hint="name"
+                    android:fontFamily="@font/ggb_bold"
+                    />
+                <EditText
+                    android:inputType="textEmailAddress"
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/ggb_regular"
+                    android:hint="jango@email.com"
+                    android:paddingLeft="10dp"
+                    android:textColorHint="#8B8989"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ggb_bold"
+                    android:text="아이디"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+                <EditText
+                    android:inputType="phone"
+                    android:id="@+id/number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/ggb_regular"
+                    android:hint="naegjango"
+                    android:paddingLeft="10dp"
+                    android:textColorHint="#8B8989"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true">
+
+            <Button
+            android:onClick="onClick"
+            android:id="@+id/confirm_button"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:text="저장"
+            android:fontFamily="@font/ggj_bold"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:background="@drawable/background4" />
+        </LinearLayout>
+    </RelativeLayout>
+    <TableLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:id="@+id/menu_bar"
+        >
+        <TableRow
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:src="@drawable/home" />
+
+            <ImageView
+                android:id="@+id/recipe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:src="@drawable/recipe" />
+
+            <ImageView
+                android:id="@+id/add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:src="@drawable/add" />
+
+            <ImageView
+                android:id="@+id/group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:src="@drawable/groups1" />
+
+            <ImageView
+                android:id="@+id/user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_weight="1"
+                android:src="@drawable/user" />
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>

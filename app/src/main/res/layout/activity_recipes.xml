@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecipesMain">
+
+    <!--레시피-->
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="0dp"
+        android:background="@color/colorMenuBar"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="레시피"
+        android:fontFamily="@font/ggj_bold"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+
+    <!--검색창과 검색버튼-->
+    <RelativeLayout
+        android:id="@+id/search"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/title"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+    <EditText
+        android:paddingStart="15dp"
+        android:background="@drawable/background9"
+        android:id="@+id/search_bar"
+        android:paddingBottom="5dp"
+        android:layout_width="310dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="15dp"
+        android:hint="재료명 또는 음식명을 입력하세요."
+        android:inputType="text"
+        android:paddingTop="5dp"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:fontFamily="@font/ggb_bold"/>
+    <ImageView
+        android:id="@+id/search_button"
+        android:layout_toEndOf="@+id/search_bar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@id/search_bar"
+        android:src="@drawable/search_button"
+        android:layout_marginLeft="5dp" />
+    </RelativeLayout>
+    <!--버튼-->
+    <RelativeLayout
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+        android:layout_below="@id/search"
+        android:id="@+id/category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/btn_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="종류별"
+        android:textColor="@color/textcolor"
+        android:textSize="18sp"
+        android:fontFamily="@font/ggb_bold"
+        />
+    <TextView
+        android:id="@+id/btn_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="상황별"
+        android:textColor="@color/textcolor"
+        android:textSize="18sp"
+        android:fontFamily="@font/ggb_bold"
+        android:layout_marginStart="40dp"
+        android:layout_toEndOf="@+id/btn_1"/>
+    <TextView
+        android:id="@+id/btn_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="조리별"
+        android:textColor="@color/textcolor"
+        android:textSize="18sp"
+        android:fontFamily="@font/ggb_bold"
+        android:layout_marginStart="40dp"
+        android:layout_toEndOf="@+id/btn_2"/>
+    <TextView
+        android:id="@+id/btn_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="스크랩"
+        android:textColor="@color/textcolor"
+        android:textSize="18sp"
+        android:fontFamily="@font/ggb_bold"
+        android:layout_marginStart="40dp"
+        android:layout_toEndOf="@+id/btn_3"/>
+    </RelativeLayout>
+
+    <!--각 버튼을 클릭할 때 뜨는 fragment-->
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_below="@id/category"
+        android:layout_above="@id/menu_bar"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF" >
+    </FrameLayout>
+
+    <!--밑 아이콘1 -->
+    <TableLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:id="@+id/menu_bar"> <!--android:background="@color/colorMenuBar"-->
+        <TableRow
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/page_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:src="@drawable/page_home" />
+
+            <ImageView
+                android:id="@+id/recipes_book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:src="@drawable/recipe" />
+
+            <ImageView
+                android:id="@+id/plus_camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:src="@drawable/camera" />
+
+            <ImageView
+                android:id="@+id/alarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:src="@drawable/groups1" />
+
+            <ImageView
+                android:id="@+id/users"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_weight="1"
+                android:src="@drawable/profile" />
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashActivity">
+    <TextView
+        android:id="@+id/logoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="80sp"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:fontFamily="@font/jalnan"
+        android:text="냉장\nGO"
+        android:textColor="@color/colorPrimaryDarkSplash" />
+    <TextView
+        android:id="@+id/copyRight"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:textSize="13sp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/ggb_regular"
+        android:text="@string/stringTextView"
+        android:contentDescription="@string/stringTextView" android:textColor="#797979"
+        android:layout_marginBottom="10dp"/>
+</RelativeLayout>

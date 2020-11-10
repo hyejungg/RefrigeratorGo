@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content">
+
+<!--데이터베이스 구축한 다음 마저 완성하는게 좋을 듯-->
+
+<ImageView
+    android:id="@+id/userImg"
+    android:layout_margin="20dp"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:src="@mipmap/ic_launcher_round"/>
+
+    <LinearLayout
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/userImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="User name"
+            android:textSize="20sp"
+            android:fontFamily="@font/ggb_bold"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="User@email.com"
+            android:textSize="15sp"
+            android:fontFamily="@font/ggb_bold"
+            android:textColor="#000000"/>
+    </LinearLayout>
+<Button
+    android:layout_centerVertical="true"
+    android:id="@+id/add"
+    android:layout_width="80dp"
+    android:layout_height="35dp"
+    android:text="신청"
+    android:fontFamily="@font/ggj_bold"
+    android:textColor="#FFFFFF"
+    android:textSize="20sp"
+    android:layout_marginRight="25dp"
+    android:layout_alignParentEnd="true"
+    android:background="@drawable/background4"
+    />
+
+</RelativeLayout>

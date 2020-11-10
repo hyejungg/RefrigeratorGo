@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/main_logo"
+        android:id="@+id/imgFood"
+        android:layout_alignParentTop="true"
+        android:layout_margin="20dp"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgFood"
+        android:textSize="20sp"
+        android:text="FoodName"
+        android:textAlignment="center"
+        android:id="@+id/txtFood"
+        android:layout_centerInParent="true"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtFood"
+        android:textSize="20sp"
+        android:text="dDate"
+        android:id="@+id/txtdate"
+        android:layout_centerInParent="true"
+        />
+    <TextView
+        android:textAlignment="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtdate"
+        android:textSize="20sp"
+        android:text="memo"
+        android:id="@+id/txtMemo"
+        android:layout_centerInParent="true"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!--background를 home.png로 설정-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackGround"
+    >
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/titleLayout"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="0dp"
+            android:background="@color/colorMenuBar"
+            android:fontFamily="@font/ggj_bold"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="나의 냉장고"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="30sp" />
+
+    <!--냉장고 카테고리-->
+    <ScrollView
+        android:layout_below="@id/title"
+        android:layout_above="@id/menu_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="NotSibling">
+
+        <!--장바구니체크리스트-->
+        <FrameLayout
+            android:id="@+id/first"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/title"
+
+            >
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10sp"
+                android:src="@drawable/list"
+                android:layout_height="40dp"
+                android:layout_width="40dp"/>
+            <Button
+                android:id="@+id/checklist"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="0dp"
+                android:paddingTop="0dp"
+                android:paddingLeft="60dp"
+                android:textAlignment="textStart"
+                android:text="장바구니 체크리스트"
+                android:textSize="20sp"
+                android:fontFamily="@font/ggb_bold" />
+        </FrameLayout>
+
+        <View
+            android:layout_marginTop="5dp"
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/first"
+            android:background="@color/colorMenuBar"
+            android:layout_centerHorizontal="true"/>
+
+        <!--우유 / 유제품-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/line1"
+            android:id="@+id/second"
+            >
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/dairyfood"
+                android:layout_height="35dp"
+                android:layout_width="40dp"/>
+
+            <Button
+                android:id="@+id/milk"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/second"
+                android:layout_alignTop="@+id/second"
+                android:fontFamily="@font/ggb_bold"
+                android:paddingLeft="60dp"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:text="우유 / 유제품"
+                android:textAlignment="textStart"
+                android:textSize="20sp" />
+        </FrameLayout>
+        <View
+            android:layout_marginTop="5dp"
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/second"
+            android:background="@color/colorMenuBar"
+            android:layout_centerHorizontal="true"/>
+
+        <!--정육 / 계란-->
+        <FrameLayout
+            android:id="@+id/third"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/line2"
+
+            >
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10sp"
+                android:src="@drawable/egg_meat"
+                android:layout_height="35dp"
+                android:layout_width="40dp"/>
+
+            <Button
+                android:id="@+id/egg"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/third"
+                android:layout_alignTop="@+id/third"
+                android:fontFamily="@font/ggb_bold"
+                android:paddingLeft="60dp"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:text="정육 / 계란"
+                android:textAlignment="textStart"
+                android:textSize="20sp" />
+        </FrameLayout>
+        <View
+            android:layout_marginTop="5dp"
+            android:id="@+id/line3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/third"
+            android:background="@color/colorMenuBar"
+            android:layout_centerHorizontal="true"/>
+
+        <!--수산물-->
+        <FrameLayout
+            android:id="@+id/fourth"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/line3"
+
+            >
+            <ImageView
+                android:layout_marginLeft="10sp"
+                android:src="@drawable/fish"
+                android:layout_height="40dp"
+                android:layout_width="40dp"/>
+            <Button
+                android:id="@+id/seafood"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="0dp"
+                android:paddingTop="0dp"
+                android:paddingLeft="60dp"
+                android:textAlignment="textStart"
+                android:text="수산물"
+                android:textSize="20sp"
+                android:fontFamily="@font/ggb_bold" />
+        </FrameLayout>
+        <View
+            android:layout_marginTop="5dp"
+            android:id="@+id/line4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/fourth"
+            android:background="@color/colorMenuBar"
+            android:layout_centerHorizontal="true"/>
+
+        <!--반찬 / 냉장 / 냉동식품-->
+        <FrameLayout
+            android:id="@+id/fifth"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/line4"
+
+            >
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10sp"
+                android:src="@drawable/sidedish"
+                android:layout_marginTop="3dp"
+                android:layout_height="37dp"
+                android:layout_width="40dp"/>
+            <Button
+                android:id="@+id/sidedish"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="0dp"
+                android:paddingTop="0dp"
+                android:paddingLeft="60dp"
+                android:textAlignment="textStart"
+                android:text="반찬 / 냉장 / 냉동식품"
+                android:textSize="20sp"
+                android:fontFamily="@font/ggb_bold" />
+        </FrameLayout>
+        <View
+            android:layout_marginTop="5dp"
+            android:id="@+id/line5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/fifth"
+            android:background="@color/colorMenuBar"
+            android:layout_centerHorizontal="true"/>
+
+        <!--채소/과일-->
+        <FrameLayout
+            android:id="@+id/sixth"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/line5"
+
+            >
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10sp"
+                android:src="@drawable/tomato"
+                android:layout_marginTop="3dp"
+                android:layout_height="37dp"
+                android:layout_width="40dp"/>
+            <Button
+                android:id="@+id/vegetable"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="0dp"
+                android:paddingTop="0dp"
+                android:paddingLeft="60dp"
+                android:textAlignment="textStart"
+                android:text="채소 / 과일"
+                android:textSize="20sp"
+                android:fontFamily="@font/ggb_bold" />
+        </FrameLayout>
+        <View
+            android:layout_marginTop="5dp"
+            android:id="@+id/line6"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/sixth"
+            android:background="@color/colorMenuBar"
+            android:layout_centerHorizontal="true"/>
+
+        <!--간식류(빵/떡/과자)-->
+        <FrameLayout
+            android:id="@+id/seventh"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/line6"
+            >
+        <ImageView
+            android:layout_marginLeft="10sp"
+            android:src="@drawable/hotdog"
+            android:layout_marginTop="2dp"
+            android:layout_height="38dp"
+            android:layout_width="40dp"/>
+        <Button
+            android:id="@+id/snack"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="0dp"
+            android:paddingTop="0dp"
+            android:paddingLeft="60dp"
+            android:textAlignment="textStart"
+            android:text="간식"
+            android:textSize="20sp"
+            android:fontFamily="@font/ggb_bold" />
+        </FrameLayout>
+        <View
+            android:layout_marginTop="5dp"
+            android:id="@+id/line7"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/seventh"
+            android:background="@color/colorMenuBar"
+            android:layout_centerHorizontal="true"/>
+
+        <!--조미료 / 드레싱-->
+        <FrameLayout
+            android:id="@+id/eighth"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/line7"
+            >
+            <ImageView
+                android:layout_marginLeft="10sp"
+                android:src="@drawable/sauces"
+                android:layout_marginTop="5dp"
+                android:layout_height="35dp"
+                android:layout_width="40dp"/>
+            <Button
+                android:id="@+id/dressing"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="0dp"
+                android:paddingTop="0dp"
+                android:paddingLeft="60dp"
+                android:textAlignment="textStart"
+                android:text="조미료 / 드레싱"
+                android:textSize="20sp"
+                android:fontFamily="@font/ggb_bold" />
+        </FrameLayout>
+        <View
+            android:layout_marginTop="5dp"
+            android:id="@+id/line8"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/eighth"
+            android:background="@color/colorMenuBar"
+            android:layout_centerHorizontal="true"/>
+
+        <!--음료/커피/차-->
+        <FrameLayout
+            android:id="@+id/ninth"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/line8"
+            >
+            <ImageView
+                android:layout_marginLeft="10sp"
+                android:src="@drawable/juice"
+                android:layout_marginTop="3dp"
+                android:layout_height="37dp"
+                android:layout_width="40dp"/>
+            <Button
+                android:id="@+id/drink"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="0dp"
+                android:paddingTop="0dp"
+                android:paddingLeft="60dp"
+                android:textAlignment="textStart"
+                android:text="음료 / 커피 / 차"
+                android:textSize="20sp"
+                android:fontFamily="@font/ggb_bold" />
+        </FrameLayout>
+        <View
+            android:layout_marginTop="5dp"
+            android:id="@+id/line9"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/ninth"
+            android:background="@color/colorMenuBar"
+            android:layout_centerHorizontal="true"/>
+
+        <!--기타-->
+        <FrameLayout
+            android:id="@+id/tenth"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/line9"
+            >
+            <ImageView
+                android:layout_marginLeft="10sp"
+                android:src="@drawable/guitar"
+                android:layout_marginTop="2dp"
+                android:layout_height="38dp"
+                android:layout_width="40dp"/>
+            <Button
+                android:id="@+id/others"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="0dp"
+                android:paddingTop="0dp"
+                android:paddingLeft="60dp"
+                android:textAlignment="textStart"
+                android:text="기타"
+                android:textSize="20sp"
+                android:fontFamily="@font/ggb_bold" />
+        </FrameLayout>
+        <View
+            android:layout_marginTop="5dp"
+            android:id="@+id/line10"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tenth"
+            android:background="@color/colorMenuBar"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+    </ScrollView>
+
+    <!--밑 아이콘1 -->
+    <TableLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:id="@+id/menu_bar"> <!--android:background="@color/colorMenuBar"-->
+        <TableRow
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/page_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:src="@drawable/page_home" />
+
+            <ImageView
+                android:id="@+id/recipes_book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:src="@drawable/recipe" />
+
+            <ImageView
+                android:id="@+id/plus_camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:src="@drawable/camera" />
+
+            <ImageView
+                android:id="@+id/alarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:src="@drawable/groups1" />
+
+            <ImageView
+                android:id="@+id/users"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_weight="1"
+                android:src="@drawable/profile" />
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>

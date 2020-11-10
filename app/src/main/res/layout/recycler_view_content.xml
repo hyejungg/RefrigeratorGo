@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="30dp"
+    android:background="@android:color/white">
+    <ImageView
+        android:layout_centerVertical="true"
+        android:id="@+id/imageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/user_image1" />
+    <LinearLayout
+        android:layout_centerVertical="true"
+        android:paddingRight="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toEndOf="@id/imageView"
+        android:id="@+id/useremail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User name"
+            android:textSize="15sp"
+            android:fontFamily="@font/ggb_bold"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="User@email.com"
+            android:textSize="15sp"
+            android:fontFamily="@font/ggb_bold"
+            android:textColor="#000000"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/background4"
+        android:fontFamily="@font/ggj_bold"
+        android:text="연결해제"
+        android:layout_centerVertical="true"
+        android:textAlignment="center"
+        android:id="@+id/btn_disconnect"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp" />
+</RelativeLayout>
+
+<!--<com.google.android.material.card.MaterialCardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/card_view"
+    android:layout_margin="16dp"
+    card_view:cardElevation="10dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:background="@android:color/white">
+
+        <ImageView
+            android:layout_width="100dp"
+            card_view:srcCompat="@drawable/user_image1"
+            android:id="@+id/user0"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintVertical_bias="0.0"
+            android:layout_height="125dp"/>
+        <TextView
+            android:text="user0"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/titleView"
+            card_view:layout_constraintStart_toEndOf="@+id/user0"
+            android:layout_marginStart="8dp"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            card_view:layout_constraintHorizontal_bias="0.524"
+            android:layout_marginTop="28dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            />
+        <TextView
+            android:text="user0@email.com"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/contentView"
+            card_view:layout_constraintStart_toEndOf="@+id/user0"
+            android:layout_marginStart="8dp"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            card_view:layout_constraintTop_toBottomOf="@+id/titleView"
+            card_view:layout_constraintHorizontal_bias="0.512"
+            card_view:layout_constraintVertical_bias="0.102"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>-->

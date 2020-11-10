@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:layout_margin="10dp">
+
+    <LinearLayout
+        android:id="@+id/first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title">
+
+        <ImageView
+            android:id="@+id/foodImage"
+            android:layout_width="45dp"
+            android:layout_height="42dp"
+            android:src="@drawable/alarmclock" />
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_gravity="right"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical">
+        <TextView
+            android:id="@+id/foodName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/ggb_bold"
+            android:text="음식 이름"
+            android:textColor="#000000"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_gravity="right"
+            android:id="@+id/foodDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/ggb_bold"
+            android:text="유통기한"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+        </LinearLayout>
+        <!--img[style=width:275px; height:275px;]-->
+    </LinearLayout>
+</LinearLayout>

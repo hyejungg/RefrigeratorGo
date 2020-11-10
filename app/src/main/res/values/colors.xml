@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <!--상태바컬러 colorPrimaryDark-->
+    <color name="colorPrimaryDark">#FFA135</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorBackGround">#FFFFFF</color>
+    <color name="colorPrimaryDarkSplash">#FFA135</color>
+    <color name="colorNewAccount">#F79F81</color>
+    <color name="colorExistAccount">#F8F391</color>
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorText">#aaaaaa</color>
+    <!--상단, 하단 뒷배경 색깔-->
+    <color name="colorMenuBar">#CBC9C9</color>
+</resources>

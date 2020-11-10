@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--조각들의 부모는 프레임레이아웃으로-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <GridLayout
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation = "horizontal"
+        android:columnCount="2"
+        android:rowCount="4"
+        android:alignmentMode="alignMargins">
+        <RelativeLayout
+            android:layout_column="0"
+            android:layout_row="0"
+            android:layout_width="150dp"
+            android:layout_height="150dp">
+            <ImageView
+                android:layout_centerInParent="true"
+                android:id="@+id/r_btn_oven"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/r_btn3_1" />
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/r_btn_oven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="오븐요리"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:fontFamily="@font/ggb_bold"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_column="1"
+            android:layout_row="0"
+            android:layout_width="150dp"
+            android:layout_height="150dp">
+        <ImageView
+            android:layout_centerInParent="true"
+            android:id="@+id/r_btn_microwave"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/r_btn3_2"/>
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/r_btn_microwave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="전자레인지"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:fontFamily="@font/ggb_bold"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_column="0"
+            android:layout_row="1"
+            android:layout_width="150dp"
+            android:layout_height="150dp">
+        <ImageView
+            android:layout_centerInParent="true"
+            android:id="@+id/r_btn_air"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/r_btn3_3"/>
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/r_btn_air"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="에어프라이어\n요리"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:fontFamily="@font/ggb_bold"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_column="1"
+            android:layout_row="1"
+            android:layout_width="150dp"
+            android:layout_height="150dp">
+        <ImageView
+            android:layout_centerInParent="true"
+            android:id="@+id/r_btn_Nofire"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/r_btn3_4"/>
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/r_btn_Nofire"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="불없이 하는\n요리"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:fontFamily="@font/ggb_bold"/>
+        </RelativeLayout>
+
+    </GridLayout>
+
+</FrameLayout>

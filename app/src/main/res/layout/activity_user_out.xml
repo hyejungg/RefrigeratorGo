@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    >
+    <TextView
+        android:id="@+id/exitTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="0dp"
+        android:background="@color/colorMenuBar"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="탈퇴"
+        android:fontFamily="@font/ggj_bold"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+
+    <ScrollView
+        android:layout_above="@id/menu_bar"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/exitTitle">
+    <RelativeLayout
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000" />
+        <TextView
+            android:layout_marginTop="20dp"
+            android:id="@+id/exit_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="탈퇴 후 본 계정으로\n\n냉장고를 이용할 수 없습니다."
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/ggb_bold"/>
+        <View
+            android:layout_marginTop="20dp"
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000" />
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/check_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="탈퇴 이유를 체크해주세요.\n\n더 좋은 냉장GO가 되도록 노력하겠습니다."
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:fontFamily="@font/ggb_bold"/>
+        <LinearLayout
+            android:id="@+id/checkbox"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:background="@drawable/background8"
+            android:orientation="vertical">
+            <CheckBox
+                android:layout_marginBottom="5dp"
+                android:id="@+id/checkBox1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="잘 사용하지 않게 된다."
+                android:fontFamily="@font/ggb_bold"
+                android:textSize="18sp"
+                android:paddingLeft="10dp"
+                android:textColor="#000000"/>
+            <CheckBox
+                android:layout_marginBottom="5dp"
+                android:id="@+id/checkBox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="다른 어플을 이용하는 중이다."
+                android:fontFamily="@font/ggb_bold"
+                android:textSize="18sp"
+                android:paddingLeft="10dp"
+                android:textColor="#000000"/>
+            <CheckBox
+                android:layout_marginBottom="5dp"
+                android:id="@+id/checkBox3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="보안 문제 때문에 사용하지 않는다."
+                android:fontFamily="@font/ggb_bold"
+                android:textSize="18sp"
+                android:paddingLeft="10dp"
+                android:textColor="#000000"/>
+            <CheckBox
+                android:layout_marginBottom="5dp"
+                android:id="@+id/checkBox4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="기타 의견"
+                android:fontFamily="@font/ggb_bold"
+                android:textSize="18sp"
+                android:paddingLeft="10dp"
+                android:textColor="#000000"/>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center">
+            <EditText
+                android:inputType="textMultiLine"
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:padding="10dp"
+                android:textColorHint="#8B8989"
+                android:hint="의견을 입력해주세요."
+                android:background="@drawable/background9"
+                android:fontFamily="@font/ggb_bold"/>
+            </ScrollView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="40dp">
+
+            <Button
+                android:id="@+id/confirm_button"
+                android:layout_width="70dp"
+                android:layout_height="35dp"
+                android:text="탈퇴"
+                android:fontFamily="@font/ggj_bold"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:background="@drawable/background4"
+                android:layout_marginRight="10dp"/>
+            <Button
+                android:id="@+id/cancel_button"
+                android:layout_width="70dp"
+                android:layout_height="35dp"
+                android:text="취소"
+                android:fontFamily="@font/ggj_bold"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:background="@drawable/background0"/>
+        </LinearLayout>
+    </LinearLayout>
+    </RelativeLayout>
+    </ScrollView>
+    <TableLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:id="@+id/menu_bar"
+        >
+        <TableRow
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:src="@drawable/home" />
+
+            <ImageView
+                android:id="@+id/recipe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:src="@drawable/recipe" />
+
+            <ImageView
+                android:id="@+id/add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:src="@drawable/add" />
+
+            <ImageView
+                android:id="@+id/group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:src="@drawable/groups1" />
+
+            <ImageView
+                android:id="@+id/user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_weight="1"
+                android:src="@drawable/user" />
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>
+

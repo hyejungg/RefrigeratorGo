@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    >
+    <TextView
+        android:id="@+id/userInformationText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/titleLayout"
+        android:layout_alignTop="@+id/titleLayout"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="0dp"
+        android:background="@color/colorMenuBar"
+        android:fontFamily="@font/ggj_bold"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="사용자 정보"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+    <LinearLayout
+        android:id="@+id/userInfo"
+        android:layout_below="@id/userInformationText"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/user_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/userInformationText"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/user_image1"
+            tools:visibility="visible" />
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/display_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_alignTop="@id/user_image"
+                android:text="ID"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:fontFamily="@font/ggb_bold" />
+
+            <TextView
+                android:id="@+id/display_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_name"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:text="user@neangjango.com"
+                android:fontFamily="@font/ggb_bold" />
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:id="@+id/line1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000"
+        android:layout_below="@id/userInfo"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/line1"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/first_row">
+
+        <ImageView
+            android:id="@+id/push_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/push_bell" />
+        <TextView
+            android:id="@+id/push_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="푸쉬알림 ON / OFF"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:fontFamily="@font/ggb_bold" />
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:id="@+id/on_off_switch"
+            android:layout_marginRight="20dp">
+            <Switch
+                android:id="@+id/switchButton"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+
+                android:layout_alignParentRight="true"
+                android:layout_weight="1"
+                android:track="@drawable/userset_switch_track_selector"
+                android:thumb="@drawable/userset_switch_thumb"
+                android:switchMinWidth="0dp"
+                android:textOff=""
+                android:textOn=""
+                android:thumbTextPadding="15dp"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000"
+        android:layout_below="@id/first_row"
+        android:layout_centerHorizontal="true"/>
+
+    <FrameLayout
+        android:layout_below="@id/line2"
+        android:id="@+id/second_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/notice"
+            android:layout_height="40dp"
+            android:layout_width="40dp"/>
+
+        <Button
+            android:id="@+id/notice_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/second_row"
+            android:layout_alignTop="@+id/second_row"
+            android:fontFamily="@font/ggb_bold"
+            android:onClick="onClick"
+            android:paddingLeft="67dp"
+            android:text="사용방법 / 공지사항"
+            android:textAlignment="textStart"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+        <ImageView
+            android:layout_marginRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:src="@drawable/arrow30" />
+    </FrameLayout>
+    <View
+        android:id="@+id/line3"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000"
+        android:layout_below="@id/second_row"
+        android:layout_centerHorizontal="true"/>
+    <FrameLayout
+        android:layout_below="@id/line3"
+        android:id="@+id/third_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/account"
+            android:layout_height="40dp"
+            android:layout_width="40dp"/>
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/account_button"
+            android:onClick="onClick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="67dp"
+            android:textAlignment="textStart"
+            android:text="연결된 냉장고 관리"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:fontFamily="@font/ggb_bold"/>
+        <ImageView
+            android:layout_marginRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+
+            android:src="@drawable/arrow30"
+            />
+    </FrameLayout>
+    <View
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/line4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000"
+        android:layout_below="@id/third_row"
+        android:layout_centerHorizontal="true"/>
+
+    <FrameLayout
+        android:layout_below="@id/line4"
+        android:id="@+id/fourth_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/setting"
+            android:layout_height="40dp"
+            android:layout_width="40dp"/>
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/settings_button"
+            android:onClick="onClick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="67dp"
+            android:textAlignment="textStart"
+            android:text="내정보 관리"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:fontFamily="@font/ggb_bold"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/arrow30" />
+    </FrameLayout>
+    <View
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/line5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000"
+        android:layout_below="@id/fourth_row"
+        android:layout_centerHorizontal="true"/>
+    <FrameLayout
+        android:layout_below="@id/line5"
+        android:id="@+id/fifth_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/exit"
+            android:layout_height="40dp"
+            android:layout_width="40dp"/>
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/exit_button"
+            android:onClick="onClick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="67dp"
+            android:textAlignment="textStart"
+            android:text="탈퇴"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:fontFamily="@font/ggb_bold"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/arrow30" />
+    </FrameLayout>
+
+    <TableLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:id="@+id/menu_bar"
+        >
+        <TableRow
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:src="@drawable/home" />
+
+            <ImageView
+                android:id="@+id/recipe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:src="@drawable/recipe" />
+
+            <ImageView
+                android:id="@+id/add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:src="@drawable/add" />
+
+            <ImageView
+                android:id="@+id/notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:src="@drawable/groups1" />
+
+            <ImageView
+                android:id="@+id/user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_weight="1"
+                android:src="@drawable/user" />
+        </TableRow>
+    </TableLayout>
+    <!--android:name="com.example.user_information.NoticeFragment"-->
+</RelativeLayout>
+

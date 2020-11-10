@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_centerHorizontal="true"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@mipmap/ic_launcher"
+        android:id="@+id/imageView"/>
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_below="@id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="제품명" />
+    <EditText
+        android:id="@+id/dDate"
+        android:layout_below="@id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="유통기한" />
+    <EditText
+        android:id="@+id/category"
+        android:visibility="invisible"
+        android:layout_below="@id/dDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="카테고리" />
+    <EditText
+        android:id="@+id/dMemo"
+        android:layout_below="@id/dDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="메모" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="저장"
+        android:layout_below="@id/dMemo"
+        android:id="@+id/btnUpdate"/>
+
+</RelativeLayout>
