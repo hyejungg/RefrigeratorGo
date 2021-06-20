@@ -15,7 +15,7 @@ public class PHPRequest2 {
     public String PHPtest(String food_name, String memo, String food_date, int food_index) { //String img_url
         try {
             String post_data = "foodName=" + food_name + "&memo=" + memo + "&foodDate=" + food_date + "&foodIndex=" + food_index; //전송 데이터 https://twinw.tistory.com/29
-            String url = "http://zoooz0616.dothome.co.kr/UpdateFood.php?food";
+            String url = "/UpdateFood.php?food";
             URL php_url = new URL(url);
             HttpURLConnection conn = (HttpURLConnection)php_url.openConnection();
             conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
